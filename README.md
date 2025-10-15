@@ -179,8 +179,6 @@ The **Airbnb Clone Project** aims to replicate the core functionality of Airbnb 
 
 ## CI/CD Pipeline
 
-### Overview
-
 - CI/CD (Continuous Integration/Continuous Deployment) pipelines automate the process of testing, building, and deploying code changes. This ensures that new features and bug fixes are automatically validated and deployed to production with minimal manual intervention, reducing human error and accelerating development cycles.
 
 ### Importance
