@@ -150,3 +150,29 @@ The **Airbnb Clone Project** aims to replicate the core functionality of Airbnb 
 ### Database Optimization
 
 - Implements indexing strategies for frequently accessed data and caching mechanisms to reduce database load. Optimizations improve query performance and overall system responsiveness. This feature ensures the platform can scale efficiently as user and data volume grows.
+
+## API Security
+
+### Authentication
+
+- JWT (JSON Web Tokens) or session-based authentication ensures that only registered users can access protected endpoints. This prevents unauthorized access to user accounts and personal information, maintaining the integrity of the platform.
+
+### Authorization
+
+- Role-based access control (RBAC) ensures users can only perform actions appropriate to their role (guest, host, admin). Hosts can only modify their own properties, and guests can only manage their own bookings. This prevents privilege escalation and protects against unauthorized data manipulation.
+
+### Data Encryption
+
+- Sensitive data such as passwords are hashed using secure algorithms (bcrypt, Argon2), and HTTPS/TLS encrypts data in transit. Payment information is tokenized and never stored directly. This protects user credentials and financial data from breaches and man-in-the-middle attacks.
+
+### Rate Limiting
+
+- API rate limiting prevents abuse by restricting the number of requests a user can make within a time window. This protects the system from DDoS attacks, brute-force login attempts, and excessive resource consumption. Rate limiting ensures fair usage and maintains system availability.
+
+### Input Validation & Sanitization
+
+- All user inputs are validated and sanitized to prevent SQL injection, XSS attacks, and other malicious payloads. Django's built-in protections and additional validation layers ensure data integrity. This is crucial for protecting the database and preventing security vulnerabilities.
+
+### CORS (Cross-Origin Resource Sharing)
+
+- Properly configured CORS policies control which domains can access the API. This prevents unauthorized websites from making requests on behalf of users. CORS protection is essential for preventing CSRF attacks and maintaining API security.
