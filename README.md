@@ -14,7 +14,7 @@ The **Airbnb Clone Project** aims to replicate the core functionality of Airbnb 
 - Optimized performance via indexing and caching  
 - Clean and documented APIs for easy integration
 
-## Tech Stack
+## Technology Stack
 
 - **Backend Framework:** Django + Django REST Framework  
 - **Database:** PostgreSQL  
@@ -65,3 +65,58 @@ The **Airbnb Clone Project** aims to replicate the core functionality of Airbnb 
 ### Security Specialist (optional or part-time)
 
 - Ensures authentication, authorization, data protection, and compliance with security standards.
+
+## Database Design
+
+### Key Entities
+
+#### User
+
+- **user_id:** Unique identifier (Primary Key)
+- **email:** User email address (unique)
+- **password_hash:** Encrypted password
+- **role:** User role (guest, host, admin)
+- **created_at:** Account creation timestamp
+
+**Relations:** A user can have multiple properties (as host), multiple bookings (as guest), multiple reviews, and multiple payments.
+
+#### Property
+
+- **property_id:** Unique identifier (Primary Key)
+- **host_id:** Foreign Key to User
+- **title:** Property name/title
+- **price_per_night:** Nightly rate
+- **location:** Property address/coordinates
+
+**Relations:** A property belongs to one user (host). A property can have multiple bookings and multiple reviews.
+
+#### Booking
+
+- **booking_id:** Unique identifier (Primary Key)
+- **property_id:** Foreign Key to Property
+- **user_id:** Foreign Key to User (guest)
+- **check_in_date:** Start date of booking
+- **check_out_date:** End date of booking
+- **status:** Booking status (pending, confirmed, cancelled)
+
+**Relations:** A booking belongs to one property and one user (guest). A booking is associated with one payment.
+
+#### Review
+
+- **review_id:** Unique identifier (Primary Key)
+- **property_id:** Foreign Key to Property
+- **user_id:** Foreign Key to User
+- **rating:** Numeric rating (1-5)
+- **comment:** Review text
+
+**Relations:** A review belongs to one property and one user. Each booking can optionally have one review.
+
+#### Payment
+
+- **payment_id:** Unique identifier (Primary Key)
+- **booking_id:** Foreign Key to Booking
+- **amount:** Payment amount
+- **payment_method:** Payment type (credit card, PayPal, etc.)
+- **transaction_date:** Timestamp of payment
+
+**Relations:** A payment belongs to one booking. Each booking has one associated payment.
