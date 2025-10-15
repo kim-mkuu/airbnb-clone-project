@@ -176,3 +176,23 @@ The **Airbnb Clone Project** aims to replicate the core functionality of Airbnb 
 ### CORS (Cross-Origin Resource Sharing)
 
 - Properly configured CORS policies control which domains can access the API. This prevents unauthorized websites from making requests on behalf of users. CORS protection is essential for preventing CSRF attacks and maintaining API security.
+
+## CI/CD Pipeline
+
+### Overview
+
+- CI/CD (Continuous Integration/Continuous Deployment) pipelines automate the process of testing, building, and deploying code changes. This ensures that new features and bug fixes are automatically validated and deployed to production with minimal manual intervention, reducing human error and accelerating development cycles.
+
+### Importance
+
+- CI/CD is crucial for maintaining code quality, catching bugs early, and ensuring consistent deployments across environments. Automated testing prevents broken code from reaching production, while automated deployment reduces downtime and enables faster iteration. This approach supports agile development and maintains system stability.
+
+### Tools & Implementation
+
+- **GitHub Actions:** Automates workflows for running tests, linting code, and triggering deployments on every push or pull request. Provides seamless integration with GitHub repositories.
+
+- **Docker:** Containerizes the application to ensure consistent environments across development, testing, and production. Docker images are built automatically and pushed to container registries.
+
+- **Testing Frameworks:** Pytest for unit and integration tests, ensuring code functionality is verified before deployment.
+
+- **Deployment Platforms:** AWS, Google Cloud, or DigitalOcean for hosting, with automated deployment scripts triggered by the CI/CD pipeline.
