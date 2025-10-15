@@ -120,3 +120,33 @@ The **Airbnb Clone Project** aims to replicate the core functionality of Airbnb 
 - **transaction_date:** Timestamp of payment
 
 **Relations:** A payment belongs to one booking. Each booking has one associated payment.
+
+## Feature Breakdown
+
+### User Management
+
+- Provides secure user registration, authentication, and profile management capabilities. Users can create accounts, log in with encrypted credentials, and manage their personal information. This feature ensures that both guests and hosts have personalized and secure access to the platform.
+
+### Property Management
+
+- Enables hosts to create, update, retrieve, and delete property listings with detailed information. Each property includes essential details like title, description, location, pricing, and amenities. This feature forms the core inventory of the platform, allowing hosts to showcase their properties to potential guests.
+
+### Booking System
+
+- Allows guests to reserve properties by selecting check-in and check-out dates and managing booking details. The system tracks booking status (pending, confirmed, cancelled) and prevents double-bookings. This feature facilitates the primary transaction flow between guests and hosts.
+
+### Payment Processing
+
+- Handles secure payment transactions related to bookings and records payment details for accountability. Integrates with payment gateways to process various payment methods and ensures financial transactions are tracked. This feature enables monetization and builds trust through secure payment handling.
+
+### Review System
+
+- Allows guests to leave reviews and ratings for properties they have booked. Reviews include numeric ratings and text comments that help future guests make informed decisions. This feature builds community trust and provides valuable feedback to hosts for improving their offerings.
+
+### API Documentation
+
+- Provides comprehensive documentation using OpenAPI standard for REST APIs and GraphQL schema definitions. Clear documentation ensures easy integration for frontend developers and third-party services. This feature accelerates development and reduces integration errors.
+
+### Database Optimization
+
+- Implements indexing strategies for frequently accessed data and caching mechanisms to reduce database load. Optimizations improve query performance and overall system responsiveness. This feature ensures the platform can scale efficiently as user and data volume grows.
